@@ -1,6 +1,6 @@
-package mx.com.mb3.runnergps.model;
+package mx.com.mb3.runnergps.persistence.events.vo;
 
-public class Device {
+public class DeviceVO {
 	String nameDevice;
 	String imei;
 	String model;

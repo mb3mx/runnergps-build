@@ -17,6 +17,7 @@
 		<swagger.version>2.9.2</swagger.version>
 		<swagger-annotations.version>1.5.21</swagger-annotations.version>
 		<swagger-models.version>1.5.21</swagger-models.version>
+		<notificaciones.push.revision>1.2.0</notificaciones.push.revision>
 	</properties>
 	<dependencies>
 

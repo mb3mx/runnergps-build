@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="route_tracker" match-name="api_endpoint"/>
+  <table-filter match-schema="route_tracker" match-name="application"/>
+  <table-filter match-schema="route_tracker" match-name="brand"/>
+  <table-filter match-schema="route_tracker" match-name="configuration"/>
+  <table-filter match-schema="route_tracker" match-name="current_position"/>
+  <table-filter match-schema="route_tracker" match-name="device"/>
+  <table-filter match-schema="route_tracker" match-name="device_addon"/>
+  <table-filter match-schema="route_tracker" match-name="event"/>
+  <table-filter match-schema="route_tracker" match-name="event_type"/>
+  <table-filter match-schema="route_tracker" match-name="menu"/>
+  <table-filter match-schema="route_tracker" match-name="menu_api_endpoint"/>
+  <table-filter match-schema="route_tracker" match-name="model"/>
+  <table-filter match-schema="route_tracker" match-name="page"/>
+  <table-filter match-schema="route_tracker" match-name="page_api_endpoint"/>
+  <table-filter match-schema="route_tracker" match-name="profile"/>
+  <table-filter match-schema="route_tracker" match-name="profile_menu"/>
+  <table-filter match-schema="route_tracker" match-name="resolution"/>
+  <table-filter match-schema="route_tracker" match-name="theme"/>
+  <table-filter match-schema="route_tracker" match-name="user_application"/>
+  <table-filter match-schema="route_tracker" match-name="user_device"/>
+  <table-filter match-schema="route_tracker" match-name="user_profile"/>
+  <table-filter match-schema="route_tracker" match-name="users"/>
+</hibernate-reverse-engineering>

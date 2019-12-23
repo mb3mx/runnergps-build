@@ -2,15 +2,15 @@ package mx.com.mb3.runnergps.services;
 
 import java.util.List;
 
-import mx.com.mb3.runnergps.model.Device;
+import mx.com.mb3.runnergps.persistence.events.vo.DeviceVO;
 
 public interface DeviceService {
 
-	public List<Device>getAllDevices();
-	public Device getDeviceByImei(int imei);
+	public List<DeviceVO>getAllDevices();
+	public DeviceVO findDeviceByImei(long imei);
 
-	public Device updateDeviceByImei(Device device);
+	public DeviceVO updateDeviceByImei(DeviceVO device);
 
-	public Device createDevice(Device device);
+	public DeviceVO createDevice(DeviceVO device);
 
 }

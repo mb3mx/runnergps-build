@@ -2,15 +2,15 @@ package mx.com.mb3.runnergps.services;
 
 import java.util.List;
 
-import mx.com.mb3.runnergps.model.Device;
-import mx.com.mb3.runnergps.model.Evento;
+import mx.com.mb3.runnergps.persistence.events.vo.DeviceVO;
+import mx.com.mb3.runnergps.persistence.events.vo.CurrentPositionVO;
 
 public interface TrackingService {
 
-	public List<Evento>getAllDevices();
+	public List<CurrentPositionVO>getAllDevices();
 
-	public Evento getDeviceByImei(int imei);
+	public CurrentPositionVO getDeviceByImei(int imei);
 
-	public Evento createEvent(Evento evento);
+	public CurrentPositionVO createCurrenPosition(CurrentPositionVO currentPositionVO);
 
 }

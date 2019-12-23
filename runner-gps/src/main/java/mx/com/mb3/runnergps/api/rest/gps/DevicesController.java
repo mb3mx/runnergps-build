@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import mx.com.mb3.runnergps.model.Device;
-import mx.com.mb3.runnergps.model.Evento;
+import mx.com.mb3.runnergps.persistence.events.vo.DeviceVO;
+import mx.com.mb3.runnergps.persistence.events.vo.CurrentPositionVO;
 import mx.com.mb3.runnergps.services.DeviceService;
 
 @RestController
@@ -31,20 +31,20 @@ public class DevicesController {
 
 	@RequestMapping(method = RequestMethod.GET, path = "/{imei}", produces = "application/json")
 	@ApiOperation("Regresa informacion de un dispositivo en especifico por su numero de imei. 404 si se encuentra.")
-	public Device getDeviceByImei(@ApiParam("Imei del dispositivo.No puede ser vacio.") @PathVariable int imei) {
-		return deviceService.getDeviceByImei(imei);
+	public DeviceVO getDeviceByImei(@ApiParam("Imei del dispositivo.No puede ser vacio.") @PathVariable long imei) {
+		return deviceService.findDeviceByImei(imei);
 	}
 
 	@RequestMapping(method = RequestMethod.PUT)
 	@ApiOperation("Actualiza un dispositivo del sistema por numero de imei. 404 si el identificador del dispositivo no se encuentra.")
-	public Device updateDeviceByImei(@ApiParam("Imei del dispositivo a ser actualizado. No puede ser vacio.") @RequestBody Device device) {
+	public DeviceVO updateDeviceByImei(@ApiParam("Imei del dispositivo a ser actualizado. No puede ser vacio.") @RequestBody DeviceVO device) {
 		return deviceService.updateDeviceByImei(device);
 	}
 
 	@RequestMapping(method = RequestMethod.POST, produces = "application/json")
 	@ApiOperation("Crea un nuevo dispositivo")
-	public Device createDevice(
-			@ApiParam("Informacion del dispositivo ser creado.") @RequestBody Device device) {
+	public DeviceVO createDevice(
+			@ApiParam("Informacion del dispositivo ser creado.") @RequestBody DeviceVO device) {
 		return deviceService.createDevice(device);
 	}
 
