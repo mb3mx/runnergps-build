@@ -33,6 +33,7 @@ public class SwaggerConfigProperties {
     private String maxDisplayedTags;
     @Value("${swagger.showExtensions}")
     private String showExtensions;
+    
 	public String getApiVersion() {
 		return apiVersion;
 	}

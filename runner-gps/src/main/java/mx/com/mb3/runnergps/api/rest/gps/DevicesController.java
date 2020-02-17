@@ -13,6 +13,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import mx.com.mb3.runnergps.persistence.events.vo.DeviceVO;
+import mx.com.mb3.runnergps.persistence.dto.Device;
 import mx.com.mb3.runnergps.persistence.events.vo.CurrentPositionVO;
 import mx.com.mb3.runnergps.services.DeviceService;
 
@@ -25,7 +26,7 @@ public class DevicesController {
 
 	@RequestMapping(method = RequestMethod.GET, produces = "application/json")
 	@ApiOperation("Regresa una lista de todos los dispositivos")
-	public List getAllDevices() {
+	public List<Device> getAllDevices() {
 		return deviceService.getAllDevices();
 	}
 

@@ -14,10 +14,12 @@ import mx.com.mb3.runnergps.persistence.events.vo.DeviceVO;
 public class DeviceServiceImpl implements DeviceService {
 	@Autowired
 	private DeviceDAO deviceDAO;
+	
 	@Override
-	public List<DeviceVO> getAllDevices() {
-		// TODO Auto-generated method stub
-		return null;
+	@Transactional
+	public List<Device> getAllDevices() {
+		List<Device> listDevices=deviceDAO.getAllDevices();
+		return listDevices;
 	}
 
 	@Override
@@ -29,8 +31,7 @@ public class DeviceServiceImpl implements DeviceService {
 	@Override
 	@Transactional
 	public DeviceVO findDeviceByImei(long imei) {
-		List<Device> dv=deviceDAO.findAll();
-		Device cc = deviceDAO.findDeviceByImei(imei);
+		 
 		return null;
 	}
 

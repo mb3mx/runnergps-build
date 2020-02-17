@@ -43,7 +43,6 @@ public class TrackingGpsController {
 
 	@RequestMapping(method = RequestMethod.POST, path = "/position", produces = "application/json")
 	@ApiOperation("Crea un evento para un dispositivo.")
-
 	public ResponseEntity<CurrentPositionVO> agregarCoordenada(
 			@ApiParam("Informacion del evento de un dispositivo a ser creado.") @RequestBody CurrentPositionVO currentPositionVO) {
 
